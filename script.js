@@ -10,14 +10,28 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
+// Toggle menu
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation(); // Prevents the document click from firing
   navLinks.classList.toggle("active");
 });
 
+// Close menu when clicking a nav link
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
   });
+});
+
+// Close menu when clicking anywhere outside
+document.addEventListener("click", (e) => {
+  if (
+    navLinks.classList.contains("active") &&
+    !navLinks.contains(e.target) &&
+    !hamburger.contains(e.target)
+  ) {
+    navLinks.classList.remove("active");
+  }
 });
 
 /* ==========================================
