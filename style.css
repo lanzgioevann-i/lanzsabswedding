@@ -1242,8 +1242,6 @@ html {
   color: var(--text-light);
 }
 .marquee {
-  margin-top: 4rem;
-
   width: 100vw;
   margin-top: 4rem;
   overflow: hidden;
@@ -1260,7 +1258,7 @@ html {
   gap: 24px;
 
   width: max-content;
-
+  will-change: transform;
   animation: marquee 45s linear infinite;
 }
 
@@ -1283,8 +1281,10 @@ html {
   transform: scale(1.04);
 }
 
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
+@media (hover: hover) and (pointer: fine) {
+  .marquee:hover .marquee-track {
+    animation-play-state: paused;
+  }
 }
 
 .marquee-item {
