@@ -271,12 +271,17 @@ html {
 
   overflow: hidden;
 
-  background: url("images/hero.png") center center / cover no-repeat fixed;
+  background-image: url("images/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 @media (max-width: 768px) {
   .hero {
-    background-position: 60% center;
+    background-attachment: scroll;
+    background-position: center top;
   }
 }
 
