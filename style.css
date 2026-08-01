@@ -499,13 +499,24 @@ html {
 ========================================== */
 
 .story {
-  background: var(--bg-dark);
-
   position: relative;
+  background-color: var(--bg-dark);
 
-  background:
+  background-image:
     linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.75)),
-    url("images/ourstory.jpg") center center / cover no-repeat fixed;
+    url("images/ourstory.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .story {
+    background-attachment: scroll;
+    background-position: center top;
+  }
 }
 
 .story h2 {
