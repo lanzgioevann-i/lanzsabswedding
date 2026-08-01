@@ -274,6 +274,12 @@ html {
   background: url("images/hero.png") center center / cover no-repeat fixed;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    background-position: 60% center;
+  }
+}
+
 .hero::before {
   content: "";
 
