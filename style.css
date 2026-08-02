@@ -254,6 +254,39 @@ html {
    HERO
 ========================================== */
 
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-title {
+    align-items: center;
+  }
+
+  .hero-title .ampersand {
+    align-self: center;
+  }
+
+  .hero-subtitle,
+  .hero-date {
+    width: auto;
+    text-align: center;
+  }
+
+  .hero-btn {
+    align-self: center;
+  }
+}
+
 .hero {
   clip-path: inset(0 0 0 0); /* Forces a fixed viewport reference context */
 
@@ -272,20 +305,7 @@ html {
   position: relative;
 
   overflow: hidden;
-
-  /*background-image: url("images/hero.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;*/
 }
-
-/*@media (max-width: 768px) {
-  .hero {
-    background-attachment: scroll;
-    background-position: center top;
-  }
-}*/
 
 .hero::before {
   content: "";
@@ -510,6 +530,13 @@ html {
    OUR STORY
 ========================================== */
 
+@media (max-width: 768px) {
+  .story {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .story {
   clip-path: inset(0 0 0 0); /* Forces a fixed viewport reference context */
 
@@ -552,13 +579,6 @@ html {
   inset: 0;
 }
 
-/*@media (max-width: 768px) {
-  .story {
-    background-attachment: scroll;
-    background-position: center top;
-  }
-}*/
-
 .story h2 {
   color: var(--text-light);
 }
@@ -586,7 +606,7 @@ html {
 
   border-radius: var(--radius);
 
-  padding: 45px;
+  padding: 45px 45px 200px 45px;
 
   box-shadow: var(--shadow);
 
@@ -1464,37 +1484,6 @@ html {
 /* Mobile */
 
 @media (max-width: 768px) {
-  .hero {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .hero-content {
-    width: 100%;
-    margin: 0;
-    padding: 0 2rem;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero-title {
-    align-items: center;
-  }
-
-  .hero-title .ampersand {
-    align-self: center;
-  }
-
-  .hero-subtitle,
-  .hero-date {
-    width: auto;
-    text-align: center;
-  }
-
-  .hero-btn {
-    align-self: center;
-  }
-
   .rsvp-reminder {
     padding: 1.5rem;
     margin-bottom: 2rem;
