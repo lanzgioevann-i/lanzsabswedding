@@ -653,7 +653,7 @@ html {
 @media (max-width: 768px) {
   .story {
     justify-content: center;
-    text-align: left;
+
     min-height: 100dvh !important;
   }
 }
@@ -701,7 +701,7 @@ html {
 .story-content p {
   color: var(--text-muted);
   line-height: 1.9;
-  text-align: left;
+  text-align: justify;
   margin-bottom: 1rem;
 }
 
@@ -1846,7 +1846,7 @@ html {
 
 .faq-item p {
   color: var(--text-muted);
-
+  text-align: justify;
   line-height: 1.8;
 }
 
