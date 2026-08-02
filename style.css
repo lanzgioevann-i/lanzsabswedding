@@ -470,7 +470,7 @@ html {
 
   .hero::before {
     background-image:
-      linear-gradient(rgba(20, 20, 20, 0.25), rgba(20, 20, 20, 0)),
+      linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.45)),
       url("images/hero.png") !important;
   }
 
