@@ -258,6 +258,7 @@ html {
   .hero {
     justify-content: center;
     text-align: center;
+    min-height: 100dvh !important;
   }
 
   .hero::before {
@@ -541,6 +542,7 @@ html {
   .story {
     justify-content: center;
     text-align: center;
+    min-height: 100dvh !important;
   }
 }
 
