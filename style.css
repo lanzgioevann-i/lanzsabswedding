@@ -183,10 +183,6 @@ html {
 
   height: 54px;
 
-  border: 1.5px solid rgba(245, 245, 245, 0.75);
-
-  border-radius: 50%;
-
   display: flex;
 
   justify-content: center;
@@ -202,6 +198,11 @@ html {
   color: var(--text-light);
 
   transition: var(--transition);
+}
+
+.navbar-logo {
+  width: 70px;
+  filter: invert(1);
 }
 
 .logo:hover {
@@ -652,7 +653,7 @@ html {
 @media (max-width: 768px) {
   .story {
     justify-content: center;
-    text-align: center;
+    text-align: left;
     min-height: 100dvh !important;
   }
 }
@@ -699,8 +700,9 @@ html {
 
 .story-content p {
   color: var(--text-muted);
-
   line-height: 1.9;
+  text-align: left;
+  margin-bottom: 1rem;
 }
 
 /* ==========================================
@@ -1637,6 +1639,7 @@ html {
   display: block;
   width: 90px;
   margin: 0 auto 1.5rem;
+  filter: invert(1);
 }
 
 .rsvp-date {
@@ -1765,6 +1768,13 @@ html {
     border-radius: var(--radius);
 
     box-shadow: none;
+  }
+
+  .rsvp-logo {
+    display: block;
+    width: 90px;
+    margin: 0 auto 1.5rem;
+    filter: invert(0);
   }
 
   .rsvp-date {
