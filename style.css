@@ -1454,8 +1454,8 @@ html {
 }
 
 .marquee img {
-  width: 320px;
-  height: 220px;
+  width: 260px;
+  height: 360px;
 
   object-fit: cover;
 
@@ -1474,13 +1474,13 @@ html {
 
 @media (hover: hover) and (pointer: fine) {
   .marquee:hover .marquee-track {
-    animation-play-state: paused;
+    /*animation-play-state: paused;*/
   }
 }
 
 .marquee-item {
-  width: 320px;
-  height: 220px;
+  width: 260px;
+  height: 360px;
   overflow: hidden;
   border-radius: 18px;
   flex-shrink: 0;
@@ -1488,8 +1488,8 @@ html {
 }
 
 .marquee-item img {
-  width: 100%;
-  height: 100%;
+  width: 260px;
+  height: 360px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -1628,6 +1628,25 @@ html {
   box-shadow: var(--shadow);
 }
 
+.rsvp-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rsvp-logo {
+  display: block;
+  width: 90px;
+  margin: 0 auto 1.5rem;
+}
+
+.rsvp-date {
+  font-family: "Bodoni Moda", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
 .rsvp input,
 .rsvp select,
 .rsvp textarea {
@@ -1663,6 +1682,26 @@ html {
 .rsvp select:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 4px rgba(184, 153, 120, 0.15);
+}
+
+.rsvp-message {
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  line-height: 1.8;
+
+  color: var(--text-muted);
+}
+
+.rsvp-footer {
+  text-align: center;
+
+  color: var(--text-muted);
+
+  margin: 2rem 0 1.25rem;
+
+  font-style: italic;
 }
 
 .rsvp button {
@@ -1726,6 +1765,10 @@ html {
     border-radius: var(--radius);
 
     box-shadow: none;
+  }
+
+  .rsvp-date {
+    color: var(--text-dark);
   }
 
   .rsvp input,
