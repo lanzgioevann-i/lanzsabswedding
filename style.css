@@ -526,12 +526,19 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--fixed-vh, 100vh);
+  /* 1. Use dvh to force the background to track the active viewport size */
+  height: 100dvh;
+
+  /* 2. Add an extra 10% bottom safety buffer to swallow the navigation bar space */
+  padding-bottom: 10vh;
   background-image:
     linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.75)),
     url("images/ourstory.jpg");
   background-size: cover;
   background-position: center;
+
+  background-position: center top;
+
   position: fixed; /* This pins the background to the mobile screen */
   transform: translateZ(
     0
