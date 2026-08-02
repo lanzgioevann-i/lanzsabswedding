@@ -10,14 +10,28 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
+// Toggle menu
+hamburger.addEventListener("click", (e) => {
+  e.stopPropagation(); // Prevents the document click from firing
   navLinks.classList.toggle("active");
 });
 
+// Close menu when clicking a nav link
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
   });
+});
+
+// Close menu when clicking anywhere outside
+document.addEventListener("click", (e) => {
+  if (
+    navLinks.classList.contains("active") &&
+    !navLinks.contains(e.target) &&
+    !hamburger.contains(e.target)
+  ) {
+    navLinks.classList.remove("active");
+  }
 });
 
 /* ==========================================
@@ -118,24 +132,9 @@ const observer = new IntersectionObserver(
   },
 );
 
-document
-  .querySelectorAll(
-    `
-.story-content div,
-.card,
-.timeline-item,
-.gallery-grid img,
-.faq-item,
-.rsvp form,
-.countdown,
-footer
-`,
-  )
-  .forEach((el) => {
-    el.classList.add("fade");
-
-    observer.observe(el);
-  });
+document.querySelectorAll(".fade-up").forEach((el) => {
+  observer.observe(el);
+});
 
 /* ==========================================
    GALLERY LIGHTBOX
@@ -183,34 +182,6 @@ lightbox.addEventListener("click", () => {
 });
 
 /* ==========================================
-   RSVP DEMO
-========================================== */
-
-const form = document.querySelector("form");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  alert(
-    `Thank you for your RSVP!
-
-This is currently a demo.
-
-Later we can connect this form to:
-
-• Google Forms
-• Google Sheets
-• Email
-• Firebase
-• Supabase
-
-Your response would then be saved automatically.`,
-  );
-
-  form.reset();
-});
-
-/* ==========================================
    HERO FADE-IN
 ========================================== */
 
@@ -225,4 +196,57 @@ window.addEventListener("load", () => {
     hero.style.opacity = "1";
     hero.style.transform = "translateY(0)";
   }, 200);
+});
+
+/* ==========================================
+   RSVP GoogleScripts
+========================================== */
+
+const rsvpForm = document.getElementById("rsvp-form");
+
+rsvpForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const submitButton = rsvpForm.querySelector("button");
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Submitting...";
+
+  const formData = new FormData();
+
+  formData.append("name", document.getElementById("name").value);
+  formData.append("email", document.getElementById("email").value);
+  formData.append("attendance", document.getElementById("attendance").value);
+  formData.append("message", document.getElementById("message").value);
+
+  try {
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxXiwxDp3dwBDFIBkIgND1rai5UwI3fFbSXPHebMK1r9DdH_izTWd88bHV9PqlJruuUqQ/exec",
+      {
+        method: "POST",
+        body: formData,
+      },
+    );
+
+    rsvpForm.reset();
+
+    alert("Thank you! Your RSVP has been received.");
+  } catch (err) {
+    console.error(err);
+    alert("Sorry, something went wrong. Please try again.");
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Confirm Attendance";
+  }
+});
+
+/* ==========================================
+   HERO HEADER
+========================================== */
+
+window.addEventListener("DOMContentLoaded", () => {
+  // Get the actual inner height of the device screen once
+  const vh = window.innerHeight;
+  // Apply that exact pixel height as a custom CSS variable
+  document.documentElement.style.setProperty("--fixed-vh", `${vh}px`);
 });

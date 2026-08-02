@@ -2,13 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Lanz & Sabs | Wedding</title>
+    <title>Lanz & Sabs | 27 February 2027</title>
 
-    <meta name="description" content="Join us as we celebrate our wedding." />
+    <meta
+      name="description"
+      content="Join Lanz & Sabs as they celebrate their wedding on 27 February 2027."
+    />
+
+    <meta name="theme-color" content="#141414" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -20,10 +27,12 @@
   </head>
 
   <body>
-    <!-- ================= NAVIGATION ================= -->
+    <!-- ==========================================
+     NAVIGATION
+    ========================================== -->
 
     <header class="navbar">
-      <div class="logo">L & S</div>
+      <a href="#home" class="logo" aria-label="Lanz and Sabs"> L & S </a>
 
       <nav>
         <ul class="nav-links">
@@ -33,7 +42,11 @@
 
           <li><a href="#details">Wedding</a></li>
 
+          <li><a href="#attire">Attire</a></li>
+
           <li><a href="#timeline">Timeline</a></li>
+
+          <li><a href="#party">Wedding Party</a></li>
 
           <li><a href="#gallery">Gallery</a></li>
 
@@ -43,61 +56,75 @@
         </ul>
       </nav>
 
-      <div class="hamburger">
+      <button class="hamburger" aria-label="Open Navigation">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </header>
 
-    <!-- ================= HERO ================= -->
+    <!-- ==========================================
+     HERO
+    ========================================== -->
 
     <section id="home" class="hero">
-      <div class="hero-overlay"></div>
+      <div class="hero-content fade-up">
+        <p class="hero-subtitle">My Parents Are Getting Married!</p>
 
-      <div class="hero-content">
-        <h3>We're Getting Married</h3>
+        <h1 class="hero-title">
+          <span>Lanz</span>
+          <span class="ampersand">&</span>
+          <span>Sabs</span>
+        </h1>
 
-        <h1>Lanz <span>&</span> Sabs</h1>
+        <p class="hero-date">27 February 2027</p>
 
-        <p>27 February 2027</p>
-
-        <a href="#details" class="primary-btn"> View Wedding Details </a>
+        <a href="#details" class="hero-btn"> View Wedding Details </a>
       </div>
     </section>
 
-    <!-- ================= COUNTDOWN ================= -->
+    <!-- ==========================================
+     COUNTDOWN
+    ========================================== -->
 
     <section id="countdown" class="countdown">
-      <h2>Countdown to Forever</h2>
+      <div class="container fade-up">
+        <h2>Time left til we say <strong>I do</strong></h2>
 
-      <div class="countdown-grid">
-        <div class="time-card">
-          <h1 id="days">000</h1>
-          <p>Days</p>
-        </div>
+        <div class="countdown-grid">
+          <div class="time-card">
+            <div id="days" class="count-number">000</div>
 
-        <div class="time-card">
-          <h1 id="hours">00</h1>
-          <p>Hours</p>
-        </div>
+            <p>Days</p>
+          </div>
 
-        <div class="time-card">
-          <h1 id="minutes">00</h1>
-          <p>Minutes</p>
-        </div>
+          <div class="time-card">
+            <div id="hours" class="count-number">00</div>
 
-        <div class="time-card">
-          <h1 id="seconds">00</h1>
-          <p>Seconds</p>
+            <p>Hours</p>
+          </div>
+
+          <div class="time-card">
+            <div id="minutes" class="count-number">00</div>
+
+            <p>Minutes</p>
+          </div>
+
+          <div class="time-card">
+            <div id="seconds" class="count-number">00</div>
+
+            <p>Seconds</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= STORY ================= -->
+    <!-- ==========================================
+     OUR STORY
+    ========================================== -->
 
     <section id="story" class="story">
-      <div class="container">
+      <div class="container fade-up">
         <h2>Our Story</h2>
 
         <p class="section-intro">
@@ -105,197 +132,598 @@
         </p>
 
         <div class="story-content">
-          <div>
+          <article class="story-card">
             <h3>How We Met</h3>
 
             <p>
-              Replace this with your own story. Talk about your first meeting,
-              memorable moments, and how your relationship grew.
+              Replace this with your own story. Share how your paths first
+              crossed, the moments that made you smile, and how your friendship
+              blossomed into love.
             </p>
-          </div>
+          </article>
 
-          <div>
+          <article class="story-card">
             <h3>The Proposal</h3>
 
             <p>
-              Tell everyone about the proposal. Share where it happened, how you
-              felt, and what made the day unforgettable.
+              Tell everyone about the proposal. Share where it happened, what
+              made it unforgettable, and the emotions you felt when your forever
+              began.
             </p>
-          </div>
+
+            <p>
+              Tell everyone about the proposal. Share where it happened, what
+              made it unforgettable, and the emotions you felt when your forever
+              began.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ================= DETAILS ================= -->
+    <!-- ==========================================
+     WEDDING DETAILS
+    ========================================== -->
 
     <section id="details" class="details">
-      <div class="container">
+      <div class="container fade-up">
         <h2>Wedding Details</h2>
 
+        <p class="section-intro">
+          We can't wait to celebrate this unforgettable weekend with you.
+        </p>
+
         <div class="details-grid">
-          <div class="card">
-            <h3>🏨 Preparation</h3>
+          <!-- Preparation -->
+
+          <article class="card">
+            <h3>Preparation</h3>
 
             <div class="card-content">
-              <p><strong>Date</strong><br />26 February 2027</p>
+              <div class="detail-item">
+                <span>Date</span>
 
-              <p><strong>Location</strong><br />Preparation Hotel / Venue</p>
+                <p>26 February 2027</p>
+              </div>
 
-              <p>
-                <strong>Details</strong><br />For the wedding party, family, and
-                suppliers.
-              </p>
+              <div class="detail-item">
+                <span>Location</span>
+
+                <p>Preparation Hotel / Venue</p>
+              </div>
+
+              <div class="detail-item">
+                <span>Details</span>
+
+                <p>For the wedding party, family, and suppliers.</p>
+              </div>
             </div>
 
-            <a href="#">View Map</a>
-          </div>
+            <a href="#"> View Map </a>
+          </article>
 
-          <div class="card">
-            <h3>💒 Ceremony</h3>
+          <!-- Ceremony -->
+
+          <article class="card">
+            <h3>Ceremony</h3>
 
             <div class="card-content">
-              <p><strong>Date</strong><br />27 February 2027</p>
+              <div class="detail-item">
+                <span>Date</span>
 
-              <p><strong>Time</strong><br />10:00 AM</p>
+                <p>27 February 2027</p>
+              </div>
 
-              <p><strong>Venue</strong><br />Your Church Name</p>
+              <div class="detail-item">
+                <span>Time</span>
+
+                <p>10:00 AM</p>
+              </div>
+
+              <div class="detail-item">
+                <span>Venue</span>
+
+                <p>Your Church Name</p>
+              </div>
             </div>
 
-            <a href="#">View Map</a>
-          </div>
+            <a href="#"> View Map </a>
+          </article>
 
-          <div class="card">
-            <h3>🥂 Reception</h3>
+          <!-- Reception -->
+
+          <article class="card">
+            <h3>Reception</h3>
 
             <div class="card-content">
-              <p><strong>Time</strong><br />5:00 PM</p>
+              <div class="detail-item">
+                <span>Time</span>
 
-              <p><strong>Venue</strong><br />Reception Venue</p>
+                <p>5:00 PM</p>
+              </div>
 
-              <p><strong>Details</strong><br />Dinner & Celebration</p>
+              <div class="detail-item">
+                <span>Venue</span>
+
+                <p>Reception Venue</p>
+              </div>
+
+              <div class="detail-item">
+                <span>Details</span>
+
+                <p>Dinner & Celebration</p>
+              </div>
             </div>
 
-            <a href="#">View Map</a>
-          </div>
+            <a href="#"> View Map </a>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ================= TIMELINE ================= -->
+    <!-- ==========================================
+     ATTIRE
+    ========================================== -->
+
+    <section id="attire" class="attire">
+      <div class="container fade-up">
+        <h2>Attire</h2>
+
+        <p class="section-intro">
+          We kindly invite our guests to celebrate with us in elegant
+          <strong>all-black attire.</strong>
+        </p>
+
+        <div class="attire-title">
+          <span class="line"></span>
+
+          <h3>ALL BLACK</h3>
+
+          <span class="line"></span>
+        </div>
+
+        <div class="attire-grid">
+          <article class="attire-card">
+            <img
+              src="images/attire/men.png"
+              alt="Black attire"
+              class="attire-icon"
+            />
+
+            <h3>Gentlemen</h3>
+
+            <ul>
+              <li>Black Long Sleeves</li>
+
+              <li>Black Slacks or Trousers</li>
+
+              <li>Black Dress Shoes</li>
+            </ul>
+          </article>
+
+          <article class="attire-card">
+            <img
+              src="images/attire/women.png"
+              alt="Black attire"
+              class="attire-icon"
+            />
+
+            <h3>Ladies</h3>
+
+            <ul>
+              <li>Black Dress or Gown</li>
+
+              <li>Black Heels or Flats</li>
+
+              <li>Elegant Black Accessories</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="attire-note">
+          <h4>A Gentle Request</h4>
+
+          <p>
+            To honor the elegance of our celebration, we kindly ask our guests
+            to wear
+            <strong>all-black attire.</strong>
+
+            White and ivory are lovingly reserved for the Bride and Groom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     TIMELINE
+    ========================================== -->
 
     <section id="timeline" class="timeline">
-      <div class="container">
+      <div class="container fade-up">
         <h2>Wedding Timeline</h2>
 
         <div class="timeline-list">
-          <div class="timeline-item">
-            <span>10:00</span>
+          <article class="timeline-item">
+            <div class="timeline-time">10:00 AM</div>
 
-            <h4>Ceremony Begins</h4>
+            <div class="timeline-content">
+              <h4>Ceremony Begins</h4>
+
+              <p>The beginning of our forever.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-time">11:30 AM</div>
+
+            <div class="timeline-content">
+              <h4>Family Photos</h4>
+
+              <p>Capturing beautiful memories with our loved ones.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-time">5:00 PM</div>
+
+            <div class="timeline-content">
+              <h4>Reception Opens</h4>
+
+              <p>Dinner, speeches, and celebration begin.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-time">7:00 PM</div>
+
+            <div class="timeline-content">
+              <h4>Dinner</h4>
+
+              <p>Enjoy an evening of great food and wonderful company.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-time">9:00 PM</div>
+
+            <div class="timeline-content">
+              <h4>Party Time!</h4>
+
+              <p>Let's dance the night away together.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     WEDDING PARTY
+    ========================================== -->
+
+    <section id="party" class="wedding-party">
+      <div class="container">
+        <h2>Meet Our Wedding Party</h2>
+
+        <p class="section-intro">
+          Surrounded by the people who have loved, guided, and supported us
+          through every chapter of our story.
+        </p>
+
+        <!-- Bride & Groom -->
+
+        <div class="couple-header desktop-only">
+          <h2>Lanz Irlanda &amp; Christine Sabe</h2>
+          <p>Nuptials</p>
+        </div>
+
+        <div class="couple-header mobile-only">
+          <h2>Lanz Irlanda</h2>
+          <span> &amp; </span>
+          <h2>Christine Sabe</h2>
+          <p>Nuptials</p>
+        </div>
+
+        <!-- Parents -->
+
+        <div class="party-section">
+          <h3>Parents</h3>
+
+          <div class="two-column">
+            <div>
+              <h4>Groom's Parents</h4>
+              <p>Mr. & Mrs. Irlanda</p>
+            </div>
+            <div>
+              <h4>Bride's Parents</h4>
+              <p>Mr. & Mrs. Santos</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Principal Sponsors -->
+
+        <div class="party-section">
+          <h3>Principal Sponsors</h3>
+
+          <div class="two-column">
+            <div>
+              <p>Mr. Juan Dela Cruz</p>
+
+              <p>Mr. Pedro Reyes</p>
+
+              <p>Mr. Carlos Garcia</p>
+
+              <p>Mr. Miguel Flores</p>
+            </div>
+            <div>
+              <p>Mrs. Maria Dela Cruz</p>
+
+              <p>Mrs. Ana Reyes</p>
+
+              <p>Mrs. Grace Garcia</p>
+
+              <p>Mrs. Sofia Flores</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Sponsors -->
+
+        <div class="party-section">
+          <h3>Secondary Sponsors</h3>
+
+          <div class="two-column">
+            <div>
+              <p><strong>Candle</strong></p>
+              <p>John & Jane</p>
+
+              <p><strong>Veil</strong></p>
+              <p>Michael & Anna</p>
+            </div>
+
+            <div>
+              <p><strong>Bible</strong></p>
+              <p>Mark & Rose</p>
+
+              <p><strong>Cord</strong></p>
+              <p>Chris & Bea</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entourage -->
+
+        <div class="party-section">
+          <h3>Wedding Entourage</h3>
+
+          <div class="two-column">
+            <div>
+              <h4>Best Man</h4>
+              <p>Michael Cruz</p>
+
+              <br />
+
+              <h4>Groomsmen</h4>
+
+              <p>John</p>
+              <p>Mark</p>
+              <p>Chris</p>
+              <p>Paul</p>
+            </div>
+            <div>
+              <h4>Maid of Honor</h4>
+              <p>Anna Santos</p>
+
+              <br />
+
+              <h4>Bridesmaids</h4>
+
+              <p>Bea</p>
+              <p>Nicole</p>
+              <p>Hannah</p>
+              <p>Marie</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bearers -->
+
+        <div class="party-section">
+          <h3>Little Entourage</h3>
+
+          <div class="three-column">
+            <div>
+              <h4>Bible Bearer</h4>
+
+              <p>Lucas</p>
+            </div>
+
+            <div>
+              <h4>Ring Bearer</h4>
+
+              <p>Jacob</p>
+            </div>
+
+            <div>
+              <h4>Coin Bearer</h4>
+
+              <p>Ethan</p>
+            </div>
           </div>
 
-          <div class="timeline-item">
-            <span>11:30</span>
+          <div class="flower-girls">
+            <h4>Flower Girls</h4>
 
-            <h4>Family Photos</h4>
-          </div>
-
-          <div class="timeline-item">
-            <span>5:00</span>
-
-            <h4>Reception Opens</h4>
-          </div>
-
-          <div class="timeline-item">
-            <span>7:00</span>
-
-            <h4>Dinner</h4>
-          </div>
-
-          <div class="timeline-item">
-            <span>9:00</span>
-
-            <h4>Party Time!</h4>
+            <p>Sophia • Emma • Chloe</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= GALLERY ================= -->
+    <!-- ==========================================
+     GALLERY
+    ========================================== -->
 
     <section id="gallery" class="gallery">
-      <div class="container">
-        <h2>Gallery</h2>
+      <div class="container fade-up">
+        <p class="section-intro">A few moments we've cherished together.</p>
+      </div>
 
-        <div class="gallery-grid">
-          <img src="images/hero.jpeg" alt="" />
-          <img src="images/hero.jpeg" alt="" />
-          <img src="images/hero.jpeg" alt="" />
-          <img src="images/hero.jpeg" alt="" />
-          <img src="images/hero.jpeg" alt="" />
-          <img src="images/hero.jpeg" alt="" />
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage1.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage2.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage3.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage4.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage5.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage6.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage7.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage8.jpg" />
+          </div>
+
+          <!-- duplicate -->
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage1.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage2.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage3.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage4.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage5.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage6.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage7.jpg" />
+          </div>
+          <div class="marquee-item">
+            <img src="images/gallery/galleryimage8.jpg" />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= RSVP ================= -->
+    <!-- ==========================================
+     RSVP
+    ========================================== -->
 
     <section id="rsvp" class="rsvp">
-      <div class="container">
+      <div class="container fade-up">
         <h2>RSVP</h2>
 
-        <form>
-          <input type="text" placeholder="Your Name" required />
+        <p class="section-intro">
+          We would be honored to celebrate with you. Kindly respond before
+          <strong>January 31, 2027.</strong>
+        </p>
 
-          <input type="email" placeholder="Email Address" />
+        <div class="rsvp-reminder fade-up">
+          <h3>Kindly Note</h3>
 
-          <select>
-            <option>Will you attend?</option>
+          <p>
+            We have carefully planned a small and intimate wedding celebration.
+            To ensure everyone can be comfortably accommodated, this invitation
+            is intended only for the guest(s) named on this invitation.
+          </p>
+
+          <p>
+            As much as we would love to celebrate with everyone, we kindly ask
+            that only the guest(s) named on this invitation attend.
+          </p>
+
+          <p class="rsvp-reminder-footer">
+            Thank you for your understanding and for being part of our special
+            day.
+          </p>
+        </div>
+
+        <form id="rsvp-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+
+          <input type="email" id="email" placeholder="Email Address" required />
+
+          <select id="attendance" required>
+            <option value="">Will you attend?</option>
 
             <option>Yes, I'll be there!</option>
 
             <option>Sorry, I can't make it.</option>
           </select>
 
-          <textarea placeholder="Leave a message..."></textarea>
+          <textarea id="message" placeholder="Leave us a message..."></textarea>
 
-          <button type="submit">Send RSVP</button>
+          <button type="submit">Confirm Attendance</button>
         </form>
       </div>
     </section>
 
-    <!-- ================= FAQ ================= -->
+    <!-- ==========================================
+     FAQ
+    ========================================== -->
 
     <section id="faq" class="faq">
-      <div class="container">
+      <div class="container fade-up">
         <h2>Frequently Asked Questions</h2>
 
         <div class="faq-item">
           <h3>What should I wear?</h3>
 
-          <p>Formal / Semi-formal attire.</p>
+          <p>
+            We kindly request elegant all-black formal attire. White and ivory
+            are reserved for the Bride and Groom.
+          </p>
         </div>
 
         <div class="faq-item">
-          <h3>Can I bring a plus one?</h3>
+          <h3>May I bring a plus one?</h3>
 
-          <p>Please refer to your invitation.</p>
+          <p>
+            As much as we would love to celebrate with everyone, our wedding is
+            intentionally intimate. Invitations are extended only to the
+            guest(s) named on the invitation.
+          </p>
         </div>
 
         <div class="faq-item">
-          <h3>Is there parking?</h3>
+          <h3>Is parking available?</h3>
 
-          <p>Yes, parking is available at the venue.</p>
+          <p>
+            Yes. Parking information will be provided closer to the wedding
+            date.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
+    <!-- ==========================================
+     FOOTER
+    ========================================== -->
 
     <footer>
-      <h2>We can't wait to celebrate with you.</h2>
+      <div class="footer-monogram">L & S</div>
 
-      <p>Lanz & Sabs</p>
+      <h2>We can't wait to celebrate with you.</h2>
 
       <p>27 February 2027</p>
     </footer>
