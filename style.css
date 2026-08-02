@@ -260,6 +260,12 @@ html {
     text-align: center;
   }
 
+  .hero::before {
+    background-image:
+      linear-gradient(rgba(20, 20, 20, 0.25), rgba(20, 20, 20, 0)),
+      url("images/hero.png") !important;
+  }
+
   .hero-content {
     width: 100%;
     margin: 0;
@@ -284,6 +290,7 @@ html {
 
   .hero-btn {
     align-self: center;
+    text-align: center;
   }
 }
 
@@ -539,10 +546,6 @@ html {
 
 .story {
   clip-path: inset(0 0 0 0); /* Forces a fixed viewport reference context */
-
-  height: 100vh;
-
-  min-height: 700px;
 
   display: flex;
 
