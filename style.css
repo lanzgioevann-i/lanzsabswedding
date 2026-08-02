@@ -514,8 +514,9 @@ html {
   position: relative;
   overflow: hidden;
   clip-path: inset(0 0 0 0); /* Forces a fixed viewport reference context */
+  height: 100vh;
   min-height: 500px; /* Give your div some height */
-
+  display: flex;
   background-color: var(--bg-dark);
 }
 
@@ -537,6 +538,8 @@ html {
   ); /* Enables hardware acceleration for smooth scrolling */
   will-change: transform;
   z-index: -1;
+
+  inset: 0;
 }
 
 /*@media (max-width: 768px) {
