@@ -831,6 +831,38 @@ html {
    ATTIRE DESKTOP
 ========================================== */
 
+.dress-code-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  margin: 2rem 0;
+}
+
+.dress-code-title span {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.dress-code-title h4 {
+  margin: 0;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-weight: 500;
+
+  letter-spacing: 0.45em;
+
+  color: var(--text-light);
+
+  white-space: nowrap;
+}
+
 .attire-grid {
   display: grid;
 
@@ -897,7 +929,7 @@ html {
 
 .attire-icons img {
   filter: invert(1);
-  width: 90px;
+  width: 60px;
 
   height: auto;
 }
