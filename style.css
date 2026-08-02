@@ -511,13 +511,23 @@ html {
 ========================================== */
 
 .story {
-  position: relative;
-  overflow: hidden;
   clip-path: inset(0 0 0 0); /* Forces a fixed viewport reference context */
+
   height: 100vh;
-  min-height: 500px; /* Give your div some height */
+
+  min-height: 700px;
+
   display: flex;
-  background-color: var(--bg-dark);
+
+  justify-content: flex-start;
+
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
 }
 
 .story::before {
@@ -526,19 +536,12 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  /* 1. Use dvh to force the background to track the active viewport size */
-  height: 100dvh;
-
-  /* 2. Add an extra 10% bottom safety buffer to swallow the navigation bar space */
-  padding-bottom: 10vh;
+  height: var(--fixed-vh, 100vh);
   background-image:
     linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.75)),
     url("images/ourstory.jpg");
   background-size: cover;
   background-position: center;
-
-  background-position: center top;
-
   position: fixed; /* This pins the background to the mobile screen */
   transform: translateZ(
     0
