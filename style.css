@@ -52,7 +52,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
 
-  background: var(--bg-light);
+  background: var(--bg-dark);
 
   color: var(--text-dark);
 
@@ -323,7 +323,7 @@ html {
 .hero {
   clip-path: inset(0 0 0 0); /* Forces a fixed viewport reference context */
 
-  height: 100vh;
+  height: 100dvh;
 
   min-height: 700px;
 
@@ -345,8 +345,8 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: var(--fixed-vh, 100vh);
+  height: 100vh;
+  width: 100vw;
   background-image: url("images/hero.png");
   background-size: cover;
   background-position: center;
@@ -601,16 +601,13 @@ html {
 .story {
   clip-path: inset(0 0 0 0); /* Forces a fixed viewport reference context */
 
-  display: flex;
-
-  justify-content: flex-start;
-
-  align-items: center;
-
-  text-align: center;
-
   position: relative;
 
+  overflow: hidden;
+
+  margin-bottom: -1px;
+
+  position: relative;
   overflow: hidden;
 }
 
@@ -619,8 +616,8 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: var(--fixed-vh, 100vh);
+  height: 100vh;
+  width: 100vw;
   background-image:
     linear-gradient(rgba(20, 20, 20, 0.75), rgba(20, 20, 20, 0.75)),
     url("images/ourstory.jpg");
@@ -653,8 +650,10 @@ html {
 @media (max-width: 768px) {
   .story {
     justify-content: center;
+  }
 
-    min-height: 100dvh !important;
+  .story::before {
+    background-repeat: repeat-x;
   }
 }
 
@@ -670,26 +669,6 @@ html {
   margin-top: 60px;
 }
 
-.story-content div {
-  background: var(--bg-card);
-
-  border: 1px solid var(--border-dark);
-
-  border-radius: var(--radius);
-
-  padding: 45px 45px 200px 45px;
-
-  box-shadow: var(--shadow);
-
-  transition: var(--transition);
-}
-
-.story-content div:hover {
-  transform: translateY(-8px);
-
-  box-shadow: var(--shadow-hover);
-}
-
 .story-content h3 {
   color: var(--text-light);
 
@@ -703,6 +682,12 @@ html {
   line-height: 1.9;
   text-align: justify;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .story-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================

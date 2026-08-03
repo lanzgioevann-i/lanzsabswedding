@@ -239,14 +239,3 @@ rsvpForm.addEventListener("submit", async function (e) {
     submitButton.textContent = "Confirm Attendance";
   }
 });
-
-/* ==========================================
-   HERO HEADER
-========================================== */
-
-window.addEventListener("DOMContentLoaded", () => {
-  // Get the actual inner height of the device screen once
-  const vh = window.innerHeight;
-  // Apply that exact pixel height as a custom CSS variable
-  document.documentElement.style.setProperty("--fixed-vh", `${vh}px`);
-});
