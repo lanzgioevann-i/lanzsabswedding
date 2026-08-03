@@ -462,7 +462,7 @@ html {
   transform: translateY(-3px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .hero {
     justify-content: center;
     text-align: center;
@@ -1916,7 +1916,7 @@ footer p:last-child {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .desktop-only {
     display: none;
   }
@@ -1926,7 +1926,7 @@ footer p:last-child {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .mobile-only {
     display: block;
   }
