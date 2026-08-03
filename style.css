@@ -1855,6 +1855,13 @@ footer {
   font-family: "Bodoni Moda", serif;
 }
 
+.footer-logo {
+  display: block;
+  width: 70px;
+  margin: 0 auto 1.5rem;
+  filter: invert(1);
+}
+
 footer::before {
   display: block;
 
