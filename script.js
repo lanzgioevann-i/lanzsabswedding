@@ -217,6 +217,7 @@ rsvpForm.addEventListener("submit", async function (e) {
   formData.append("name", document.getElementById("name").value);
   formData.append("email", document.getElementById("email").value);
   formData.append("attendance", document.getElementById("attendance").value);
+  formData.append("stay", document.getElementById("stay").value);
   formData.append("message", document.getElementById("message").value);
 
   try {
