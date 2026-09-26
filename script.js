@@ -222,7 +222,7 @@ rsvpForm.addEventListener("submit", async function (e) {
 
   try {
     await fetch(
-      "https://script.google.com/macros/s/AKfycbyJibvTV6WrNv70HKvyte8ZINcQLgFjd4HdEnhUTniP_BTvlHD6H1ZPiUvPZayr9D0MxA/exec",
+      "https://script.google.com/macros/s/AKfycbxh8E5A6khxVlMNzP_-PckUDiS3QIdN3boyXWHKkbiWTFBNO7QL3DXNTvF2T504YYavsg/exec",
       {
         method: "POST",
         body: formData,
